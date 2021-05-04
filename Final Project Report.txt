@@ -1,0 +1,67 @@
+I used the default project (with the example project requirements). I discussed using the default project 
+
+with Quinn and asked about it in my lab course. When making my GUI, I made the initial function and 
+
+declared the global variable. The function should have a blank plot at the beginning, so I made a figure 
+
+and plotted (0,0) to make a blank plot. Then I made all of the initial button information, which included 
+
+the text and data for the title, x label, y label, x limit, y limit, x data, y, data, and the type and color’s 
+
+menu and text. At the end, I made the plot button and connected it to its own callback and then ended 
+
+that initial function.
+
+
+
+The plot callback starts with an initial declaration of the global variable. Then, all of the buttons and text 
+
+in the initial function have their visibility switched off so the view of the plot is clear. Then a reset button 
+
+connected to its own callback is made. For the type and color’s menus, I preset an initial value (circles 
+
+and red) and then made a switch statement for each (so they can be selected by the user). I then moved 
+
+on to actually making the plotting function itself, which I broke up into different parts. Since I could not 
+
+easily make it all one function (the titles, limits, color, type, etc.), I made multiple parts (the data: x and y 
+
+values and the color and type, titles and labels all separately, and the x and y limits). For the data, I 
+
+made variables t and s to represent the x and y values and made them equal to the numbers from their 
+
+respective data strings. For the type and color, I had to combine those strings. I did that by making type 
+
+equal one string, color being another, and then combining them (comb) before using them in the plot 
+
+function (plot(t,s,comb)). For the title, I used title(‘%d\n’,char(gui.titleEdit.String)), which could have 
+
+been shortened. For the x label I used xlabel([char(gui.xLabelEdit.String)]) and the same format for the y 
+
+label so they would use a character string. For the x and y limits I was able to use the format 
+
+xlim(str2num(gui.xLimEdit.String)). At that point the plot function was done.
+
+
+
+To finish off the code, I made the reset callback function. I started it with the close all line (to close the 
+
+active plot) and then ended it with the initial function (finalProjectGUI()).
+
+
+
+I found that the conceptualization of the project overall was not too difficult. I was mainly having issues 
+
+with the technical parts (like setting up the part that actually plots the data and the combined character 
+
+string for the type and color) of the final project.
+
+
+
+I may use GUIs in the future as a calculating function (like a normal MATLAB function without the 
+
+requirement of being called with the data) similar to the code I made. I would also likely be able to use 
+
+them as a base for a physical input or output device (like a musical instrument or part of a physical 
+
+mechanism).
